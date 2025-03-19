@@ -15,6 +15,7 @@ setup(
         (os.path.join('share', package_name, 'launch'), glob('launch/*.py')),
         (os.path.join('share', package_name, 'urdf'), glob('urdf/*')),
         (os.path.join('share', package_name, 'config'), glob('config/*')),
+        (os.path.join('share', package_name, 'scripts'), glob('scripts/*.py')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -28,6 +29,7 @@ setup(
             'led_control = car_description.led_control:main',
             'motor_control = car_description.motor_control:main',
             'keyboard_control = car_description.keyboard_control:main',
+            'hand_detection_control = scripts.hand_detection_control:main',
         ],
     },
 ) 
